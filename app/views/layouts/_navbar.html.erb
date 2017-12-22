@@ -1,10 +1,16 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <a class="navbar-brand" href='#'>Blogger</a>
+  <!-- left side -->
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item "><%= link_to "Bloggers", allusers_path, class: 'nav-link'%></li>
-    <li class="nav-item "><%= link_to "My Blog", allusers_path, class: 'nav-link'%></li>
+    <li class="nav-item "><%= link_to "All Bloggers", allusers_path, class: 'nav-link'%></li>
+    <li class="nav-item "><%= link_to "My Blog", myblog_path, class: 'nav-link'%></li>
   </ul>
+  <!-- right side -->
   <ul class="navbar-nav ml-auto">
+    <li class="nav-item "><%= link_to "Edit Profile", edit_path, class: 'nav-link' %></li>
     <li class="nav-item "><%= link_to "Logout", logout_path, class: 'nav-link' %></li>
-  </ul>
+
+
+
 </nav>
+

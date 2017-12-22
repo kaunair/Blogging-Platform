@@ -1,2 +1,26 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= form_for @user, html: { multipart: true}  do |f| %>
+  <!-- Display Errors -->
+  <% if @user.errors.any? %>
+    <%= @user.errors.full_messages.each do |msg| %>
+      <%= msg %> <br>
+    <% end %>
+  <% end %>
+
+  <%= f.label :email %><br>
+  <%= f.email_field :email %><br>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br>
+
+  <%= f.label :password_confirmation %><br>
+  <%= f.password_field :password_confirmation %><br>
+  Photo(optional)
+   <%= f.file_field :avatar %>
+
+  <%= f.submit %><br>
+   <%end%>
+
+
